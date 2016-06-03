@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '0010_migrate_use_structure'),
+        ('cms', '0013_urlconfrevision'),
     ]
 
     operations = [
