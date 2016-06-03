@@ -1,11 +1,11 @@
-from cms.plugin_base import CMSPluginBase
-from cms.plugin_pool import plugin_pool
 from django.template import Template
+from cms.plugin_pool import plugin_pool
+from cms.plugin_base import CMSPluginBase
 from django.utils.safestring import mark_safe
-
 from cmsplugin_raw_html.models import RawHtmlPlugin
 
 
+@plugin_pool.register_plugin
 class CMSRawHtmlPlugin(CMSPluginBase):
 
     model = RawHtmlPlugin
@@ -21,4 +21,3 @@ class CMSRawHtmlPlugin(CMSPluginBase):
             })
         return context
 
-plugin_pool.register_plugin(CMSRawHtmlPlugin)
